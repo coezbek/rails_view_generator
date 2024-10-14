@@ -1,0 +1,19 @@
+Description:
+    Generates the html.erb views (and only those) of the scaffold generator for a given model.
+    Pass the same arguments as you would to the scaffold generator, i.e. pass the name of 
+    the model (in singular form), either CamelCased or under_scored, as the first argument,
+    and then a list of attribute pairs ('fieldname:type').
+
+    The following files are generated:
+        - index.html.erb
+        - show.html.erb
+        - new.html.erb
+        - edit.html.erb
+        - _form.html.erb
+        - _<model>.html.erb (partial)
+
+Example:
+    'bin/rails generate view post'
+    'bin/rails generate view post title:string body:text published:boolean'
+    'bin/rails generate view purchase amount:decimal tracking_id:integer:uniq'
+    'bin/rails generate view user email:uniq password:digest'
